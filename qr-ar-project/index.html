@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizza Modello 3D in AR</title>
+</head>
+<body>
+  <h1>Visualizza il Modello 3D in AR</h1>
+
+  <!-- Link per dispositivi Apple -->
+  <a href="./qr-ar-project/modello.usdz" rel="ar">
+    <button>Visualizza in AR (iPhone/iPad)</button>
+  </a>
+
+  <br><br>
+
+  <!-- Visualizzazione per dispositivi Android -->
+  <model-viewer 
+    src="./qr-ar-project/modello.glb" 
+    ar 
+    ar-modes="webxr scene-viewer quick-look" 
+    camera-controls 
+    auto-rotate 
+    style="width: 100%; height: 400px;">
+  </model-viewer>
+
+  <!-- Importa il tag <model-viewer> -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>
